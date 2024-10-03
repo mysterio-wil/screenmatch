@@ -20,25 +20,21 @@ public class Principal {
         Serie casaDragon = new Serie();
         casaDragon.setNombre("La casa del dragón");
         casaDragon.setFechaDeLanzamiento(2022);
-        casaDragon.setTemporada(1);
+        casaDragon.setTemporadas(1);
         casaDragon.setMinutosPorEpisodio(50);
-        casaDragon.setEpisodioPorTemporada(10);
+        casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
+
+        Pelicula otraPelicula = new Pelicula();
+        otraPelicula.setNombre("Matrix");
+        otraPelicula.setFechaDeLanzamiento(1998);
+        otraPelicula.setDuracionEnMinutos(180);
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
         calculadora.incluye(miPelicula);
         calculadora.incluye(casaDragon);
-        System.out.println(calculadora.getTiempoTotal());
-
-
-
-
-
-//        Pelicula otraPelicula = new Pelicula();
-//        otraPelicula.setNombre("Matrix");
-//        otraPelicula.setFechaDeLanzamiento(1998);
-//        otraPelicula.setDuracionEnMinutos(180);
-
+        calculadora.incluye(otraPelicula);
+        System.out.println("Tiempo necesario para ver tus títulos favoritos estas vacaciones " + calculadora.getTiempoTotal() + " minutos");
     }
 }
