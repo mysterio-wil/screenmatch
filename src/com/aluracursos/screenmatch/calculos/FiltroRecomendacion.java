@@ -1,6 +1,6 @@
 package com.aluracursos.screenmatch.calculos;
 
-public class FiltroClasificacion {
+public class FiltroRecomendacion {
     public void filtra(Clasificacion clasificacion){
         if (clasificacion.getClasificacion() >= 4) {
             System.out.println("Muy bien evaluado en el momento");
